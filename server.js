@@ -6,8 +6,8 @@ dotenv.config();
 
 app.use(express.static('public'));
 
-// Add a new route that returns the API key
 app.get('/api-key', (req, res) => {
+  //console.log(process.env.API_KEY); // Log the API key to the console
   res.send(process.env.API_KEY);
 });
 

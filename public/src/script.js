@@ -7,11 +7,12 @@ require([
     "esri/WebMap",
     "esri/config"
   ], function (esriConfig, Map, MapView, FeatureLayer, Legend, WebMap, esriConfig) {
-    fetch('/api-key')
-    .then(response => response.text())
-    .then(apiKey => {
-      esriConfig.apiKey = apiKey;
-    });
+
+  fetch('/api-key')
+  .then(response => response.text())
+  .then(apiKey => {
+    esriConfig.apiKey = apiKey;
+  });
   
     const basicLayer = new FeatureLayer({
       url: "https://services1.arcgis.com/aj3aipVBpIl0LroJ/arcgis/rest/services/2020basic/FeatureServer/0",
